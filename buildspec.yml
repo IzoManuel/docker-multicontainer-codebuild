@@ -30,7 +30,7 @@ phases:
     commands:
       - echo "Tagging docker images"
       - docker tag cb-service-01:latest "$DOCKERHUB_USERNAME/cb-service-01:$COMMIT_HASH"
-      - docker tag cb-service-01:latest "$DOCKERHUB_USERNAME/cb-service-01:$COMMIT_HASH"
+      - docker tag cb-service-02:latest "$DOCKERHUB_USERNAME/cb-service-02:$COMMIT_HASH"
       - echo "Pushing docker images to docker hub"
       - docker push "$DOCKERHUB_USERNAME/cb-service-01:$COMMIT_HASH"
-      - docker push "$DOCKERHUB_USERNAME/cb-service-01:$COMMIT_HASH"
+      - docker push "$DOCKERHUB_USERNAME/cb-service-02:$COMMIT_HASH"
