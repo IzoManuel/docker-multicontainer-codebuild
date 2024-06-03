@@ -17,6 +17,7 @@ phases:
   pre_build:
     commands:
       - echo "Logging in to Docker Hub"
+      - echo "$DOCKERHUB_ACCESS_TOKEN"
       # - echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
       # - export COMMIT_HASH=$
 
