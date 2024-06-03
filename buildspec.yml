@@ -1,0 +1,35 @@
+version: 0.2
+
+env:
+  variables:
+    DOCKERHUB_USERNAME: "/cicd/dockerhub:username"
+    DOCKERHUB_ACCESS_TOKEN: "/cicd/dockerhub:personal_access_token"
+
+phases:
+  install:
+    runtime-version:
+      python: 3.11
+    commands:
+      - echo "Installing docker compose"
+      # - sudo apt install docker-compose"
+      # - docker-compose --version
+
+  pre-build:
+    commands:
+      - echo "Logging in to Docker Hub"
+      # - echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+      # - export COMMIT_HASH=$
+
+  build:
+    commands:
+      - echo "Building Docker images"
+      # - docker-compose build
+
+  post_build:
+    commands:
+      - echo "Tagging docker images"
+      # - docker tag cb-service-01:latest "$DOCKERHUB_USERNAME/cb-service-01:$COMMIT_HASH"
+      # - docker tag cb-service-01:latest "$DOCKERHUB_USERNAME/cb-service-01:$COMMIT_HASH"
+      # - echo "Pushing docker images to docker hub"
+      # - docker push "$DOCKERHUB_USERNAME/cb-service-01:$COMMIT_HASH"
+      # - docker push "$DOCKERHUB_USERNAME/cb-service-01:$COMMIT_HASH"
