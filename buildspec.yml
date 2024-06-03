@@ -7,7 +7,7 @@ env:
 
 phases:
   install:
-    runtime-version:
+    runtime-versions:
       python: 3.11
     commands:
       - echo "Installing docker compose"
