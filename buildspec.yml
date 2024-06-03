@@ -1,7 +1,7 @@
 version: 0.2
 
 env:
-  variables:
+  secrets-manager:
     DOCKERHUB_USERNAME: "/cicd/dockerhub:username"
     DOCKERHUB_ACCESS_TOKEN: "/cicd/dockerhub:personal_access_token"
 
