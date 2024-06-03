@@ -14,7 +14,7 @@ phases:
       # - sudo apt install docker-compose"
       # - docker-compose --version
 
-  pre-build:
+  pre_build:
     commands:
       - echo "Logging in to Docker Hub"
       # - echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
